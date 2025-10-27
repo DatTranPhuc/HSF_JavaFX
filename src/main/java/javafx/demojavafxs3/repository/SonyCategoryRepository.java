@@ -1,9 +1,9 @@
 package javafx.demojavafxs3.repository;
 
-import javafx.demojavafxs3.entity.User;
+import javafx.demojavafxs3.entity.SonyCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User,Integer> {
+public interface SonyCategoryRepository extends JpaRepository<SonyCategory, Integer> {
 }

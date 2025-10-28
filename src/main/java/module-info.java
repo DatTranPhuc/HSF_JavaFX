@@ -12,14 +12,17 @@ module javafx.demojavafxs3 {
     requires java.sql;
     requires org.hibernate.orm.core;
     requires com.microsoft.sqlserver.jdbc;
+    requires jakarta.validation;
 
-    // Open packages for reflective access
     opens javafx.demojavafxs3 to javafx.fxml, spring.core, spring.beans, spring.context;
     opens javafx.demojavafxs3.controller to javafx.fxml, spring.core, spring.beans, spring.context;
-    opens javafx.demojavafxs3.entity to org.hibernate.orm.core, spring.core;
+    opens javafx.demojavafxs3.entity to org.hibernate.orm.core, spring.core, spring.beans, spring.context;
     opens javafx.demojavafxs3.repository to spring.core, spring.beans, spring.context;
     opens javafx.demojavafxs3.service to spring.core, spring.beans, spring.context;
-
+    opens javafx.demojavafxs3.service.impl to spring.core, spring.beans, spring.context;
+    opens javafx.demojavafxs3.config to spring.core, spring.beans, spring.context;
+    opens javafx.demojavafxs3.dto to javafx.base;
 
     exports javafx.demojavafxs3;
+    exports javafx.demojavafxs3.controller;
 }
